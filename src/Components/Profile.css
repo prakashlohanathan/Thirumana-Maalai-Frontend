@@ -1,0 +1,42 @@
+.profile-complete-data-container{
+    display: flex;
+    flex-direction: row;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height:100vh;
+    margin-top:100px ;
+    overflow: auto;
+    padding-bottom: 8%;
+    background-image: radial-gradient( circle 763px at 18.3% 24.1%,  rgb(137, 208, 255) 7.4%, rgb(40, 183, 226) 58.3% );
+    padding-top:20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile-image-container{
+    border: 10px solid red;
+}
+.profile-data-container{
+    width: 40%;
+    background-image: url(../Images/matrimony-profile-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    border: 10px solid red;
+    color: white;
+    
+}
+.profile-details-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin:5% 10%;
+    font-size: 25px;
+}
+@media only screen and (max-width: 900px){
+    .profile-complete-data-container{
+        margin-top:70px ;
+        padding-bottom: 20%;
+    }
+}

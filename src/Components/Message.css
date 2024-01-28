@@ -1,0 +1,193 @@
+.message-container{
+    min-height: 90vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    background-image: radial-gradient( circle 763px at 18.3% 24.1%,  rgb(137, 208, 255) 7.4%, rgb(40, 183, 226) 58.3% );
+    justify-content: center;
+    overflow: auto;
+}
+.message-user-title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0% 3%;
+    border-bottom: 1px solid black;
+    background-color: rgb(229, 233, 233);
+}
+.none{
+    display: none;
+}
+.message-left-box{
+    width:700px;
+    min-height: 90vh;
+    max-height: 90vh;
+}
+.message-right-box{
+    width:800px;
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow: hidden;
+}
+.message-profiles{
+    background-image: url("https://pics.craiyon.com/2023-09-17/9d1e14a48e5740fcbab10c5a78e9672c.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: auto;
+    box-shadow: 4px 5px 10px 6px;
+    border-radius: 15px 0px 0px 15px;
+    padding:3%;
+}
+.user-messages{
+    background-image: url("https://e1.pxfuel.com/desktop-wallpaper/299/197/desktop-wallpaper-whats-app-posted-by-zoey-tremblay-whatsapp-chat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: auto;
+    box-shadow: 4px 5px 10px 6px;
+    border-radius: 0px 15px 15px 0px;
+    border-left: 12px solid rgb(156, 156, 156);
+}
+.user-message-box{
+    background-color: rgba(255, 255, 255, 0.801);
+    border-bottom:1px solid rgb(95, 95, 95) ;
+    width: 100%;
+    padding: 4%;
+    border-radius: 15px 15px;
+}
+.user-message-container{
+    min-height: 90vh;
+    max-height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.profile-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgb(82, 81, 81);
+    padding:3% 5%;
+    border-top: 18px solid rgb(70, 70, 70);
+    background-color: rgb(214, 214, 214);
+}
+.message-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0% 3%;
+}
+.message-left{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.message-right{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.msg-back-arrow{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.msg-date-box{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.msg-date{
+    background-color: rgb(190, 190, 190);
+    padding: 5px;
+    border-radius: 10px;
+}
+.message-content-box{
+    margin: 2%;
+    padding:2%;
+    box-shadow: 4px 3px 10px 2px;
+}
+.msg-box-insiders{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.messages{
+    margin: 0;
+}
+.msg-time{
+    font-size: 11px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    color: rgb(69, 69, 70);
+}
+.message-top{
+    overflow: auto;
+    margin-bottom: 110px;
+}
+#message-right-color{
+    background-color: rgb(89, 197, 89);
+    border-radius: 15px 0px 15px 15px;
+    
+}
+#message-left-color{
+    background-color: rgb(235, 235, 235);
+    border-radius: 0px 20px 20px 20px;
+}
+.send-message{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    height:80px ;
+    position: fixed;
+    bottom: 0;
+    margin-left: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.msg-input{
+    margin: 5px;
+    width: 770px;
+}
+@media only screen and (max-width: 900px){
+    .message-container{
+        margin-top:70px ;
+        padding-bottom: 20%;
+    }
+    .message-left-box{
+        width:400px;
+        min-height: 90vh;
+        max-height: 90vh;
+    }
+    .message-right-box{
+        width:800px;
+        min-height: 90vh;
+        max-height: 90vh;
+    }
+    .msg-input{
+        margin: 5;
+        width: 350px;
+    }
+    .message-top{
+        overflow: auto;
+        margin-bottom: 0px;
+    }
+}

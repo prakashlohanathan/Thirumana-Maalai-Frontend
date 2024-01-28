@@ -1,0 +1,22 @@
+.favourites-container{
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height:100vh;
+    margin-top: 100px;
+    overflow: auto;
+    padding-bottom: 8%;
+    background-image: radial-gradient( circle 763px at 18.3% 24.1%,  rgb(137, 208, 255) 7.4%, rgb(40, 183, 226) 58.3% );
+}
+.fav-title{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+@media only screen and (max-width: 900px){
+    .favourites-container{
+        margin-top:70px ;
+        padding-bottom: 20%;
+    }
+}

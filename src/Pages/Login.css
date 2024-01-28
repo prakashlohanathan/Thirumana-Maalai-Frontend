@@ -1,0 +1,29 @@
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: transparent;
+    background-image: url("https://images.pexels.com/photos/2064505/pexels-photo-2064505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+}
+.login-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 25%;
+    min-height:30%;
+    background-image: url("https://t4.ftcdn.net/jpg/00/58/22/83/360_F_58228356_NenuGRgFZq3uGvRuXxqp4MWvreKMPCCc.jpg");
+    background-size:cover;
+    padding:10px 0px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px;
+    animation:signup-box;
+    animation-duration: 4s;
+}
+/* @keyframes login-box-box{
+    from{
+        transform: translateY(110%);
+    }
+} */
