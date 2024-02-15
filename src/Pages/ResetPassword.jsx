@@ -38,7 +38,7 @@ const ResetPassword = () => {
 
 //Component for Send OTP
 const Email = ({ value, setValue }) => {
-  let [encrypt, setEncrypt] = useState("");
+  let [encrypt, setEncrypt] = useState({});
   let [otp, setOtp] = useState("");
   let [emailId, setEmailId] = useState("");
   let [user, setUser] = useState(false);
@@ -68,25 +68,30 @@ const Email = ({ value, setValue }) => {
 
   //Handle Send Otp
   async function sendOtp() {
-    let msg = String(Math.floor(Math.random() * (9999 - 1000)));
-    (function () {
-      emailjs.init("DOmC83Mf0f38CAp08");
-    })();
 
-    let templateParams = {
-      to_name: emailId,
-      name: user.name,
-      from_name: "prakash2k2mech@gmail.com",
-      message_html: msg,
-      app:"Thirumana Maalai Matrimony"
-    };
-    await emailjs.send("service_k98tzea", "template_ces44pb", templateParams);
-    setEncrypt(msg);
+    try {
+      const response = await axios.put(
+        `${api_url}/auth/set-otp`,
+        {
+          email: emailId
+        }
+      );
+      if (response.data.otp) {
+        setEncrypt(response.data.otp);
+      } else {
+        alert("Invalid Email");
+      }
+    } catch (error) {
+      console.error("Error In Fetching Data:", error);
+    }
+
   }
 
   //Handle Check OTP
   function checkOtp() {
-    if (otp === encrypt) {
+    let date = getCurrentDate();
+    //console.log(otp == Number(encrypt.value), encrypt, date == encrypt.date)
+    if (otp == Number(encrypt.value) && date == encrypt.date) {
       setValue(true);
     } else {
       alert("Invalid OTP");
@@ -214,5 +219,19 @@ const NewPassword = () => {
     </div>
   );
 };
-
+//Get Current Date
+function getCurrentDate() {
+  // Get current date
+  let currentDate = new Date();
+  // Get day, month, and year from the current date
+  let day = currentDate.getDate();
+  let month = currentDate.getMonth() + 1; // Note: January is 0!
+  let year = currentDate.getFullYear();
+  // Pad day and month with leading zeros if needed
+  day = day < 10 ? "0" + day : day;
+  month = month < 10 ? "0" + month : month;
+  // Format the date as dd/mm/yyyy
+  let date = day + "/" + month + "/" + year;
+  return date;
+}
 export default ResetPassword;
